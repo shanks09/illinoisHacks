@@ -323,11 +323,36 @@ d3.json("data/res/countries.topojson",function(error,geodata) {
                 function hideTooltip() {
                     tooltip.style("display","none");
                 }
-                createMyDonut("Afghanistan");
+                
                 // d3.select('.secondSVG')
                 //     .style('visibility', "visible")
 
-                function createMyDonut(country) {
+                var countryName;		
+
+				
+				var client = algoliasearch('QZLXA8ZEL4', 'b62a8ae086b27c6c31db76d22e5c96f2');
+				var index = client.initIndex('myDev');
+				document.getElementById('search-input').addEventListener("keypress",function(e){
+					var key = e.which || e.keyCode;
+					if(key==13){
+						index.search(
+							{
+								query: document.getElementById('search-input').value,
+								attributesToRetrieve: ['properties', 'id'],
+								hitsPerPage: 10,
+							},
+							function searchDone(err, content) {
+								if (err) throw err;
+								countryName = content.hits[0]['properties']['name']
+								document.getElementById('search-input').value = countryName;
+								createMyDonut(countryName);
+							}
+						);
+					}
+				});
+				
+				
+				function createMyDonut(country) {
                     d3.select("#myPie").remove();
                     d3.selectAll("#tooltipDonut").remove();
 
@@ -463,7 +488,7 @@ d3.json("data/res/countries.topojson",function(error,geodata) {
 var radioBtn = svg.append("foreignObject")
 					.attr("width", 250)
 					.attr("height", 150)
-					.attr("x", "5%")
+					.attr("x", "85%")
 					.attr("y", "5%")
 					.append("xhtml:body");
 					
@@ -476,5 +501,4 @@ radioBtn.html("<div id=\"radioBtn_map\">"+
         "<input type='radio' id='rBtn3' name='group1'>Water<br>"+
 		"<input type='radio' id='rBtn4' name='group1'>Literacy"+
         "</div>");
-
 

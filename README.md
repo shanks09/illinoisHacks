@@ -1,3 +1,3 @@
-# illinoisHacks
+# DemonHacks
 
 Demon hacks social concerns
