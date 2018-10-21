@@ -8,11 +8,66 @@
 <script src="http://d3js.org/topojson.v1.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="data/css/style.css">
-<header>
-    <h1 align="center"> Demon Hacks Social Awareness</h1>
-</header>
+<style>
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page_header {
+  overflow: hidden;
+  background-color: #bec6c2;
+  padding: 10px 15px;
+}
+
+.page_header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 8px;
+  text-decoration: none;
+  font-size: 17px; 
+  line-height: 22px;
+  border-radius: 4px;
+}
+
+.page_header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.page_header a:hover {
+  color: grey;
+}
+
+.page_header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .page_header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .page_header-right {
+    float: none;
+  }
+}
+</style>
 <body>
-	
+<div class="page_header">
+		<a href="#default" class="logo"><i>Demon Hacks - Social Awareness</i></a>
+		<div class="page_header-right">
+			<a class="active" href="index.html">World Map</a>
+			<a href="intersection_tooltip.html">Severely Affected Countries</a>
+		</div>
+</div>
+<div>
+    <h3 align="center">Search Box   <input id="search-input" placeholder="Search for countries ..." style="width:350px"></h3><br>
+    <!-- We use a specific placeholder in the input to guides users in their search. -->
+</div>
+	<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
     <script src="data/js/script.js" type="text/javascript"></script>
 <br>
 <div id="chart"></div>
