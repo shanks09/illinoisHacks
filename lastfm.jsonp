@@ -1,8 +1,8 @@
 var sets = [
-         {"sets": [0], "label": "Food", "size": 30},
-         {"sets": [1], "label": "Water", "size": 30},
-         {"sets": [2], "label": "Literacy", "size": 30},
-         {"sets": [3], "label": "Sanitation", "size": 30},
+         {"sets": [0], "label": "Famine", "size": 30},
+         {"sets": [1], "label": "Water Scarcity", "size": 30},
+         {"sets": [2], "label": "Illiteracy", "size": 30},
+         {"sets": [3], "label": "Lack of sanitation", "size": 30},
          {"sets": [0, 1], "size": 14},
          {"sets": [0, 2], "size": 14},
          {"sets": [0, 3], "size": 15},
