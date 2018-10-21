@@ -59,7 +59,8 @@ body {
 			<a class="active" href="intersection_tooltip.html">Severely Affected Countries</a>
 		</div>
 </div>
-    <div id="venn" style="float:left;width:550;margin-top:5%;"></div>
+	<h3 style="margin-left:2%"><i>Click on the intersections to view further details.</i></h3>	
+    <div id="venn" style="float:left;width:550;margin-top:2%;"></div>
 </body>
 
 <style>
@@ -81,7 +82,7 @@ body {
 <script src="./venn.js"></script>
 <script src="./lastfm.jsonp"></script>
 
-<canvas width="900" height="500" style="margin-left:5%;margin-top:5%;float:left"></canvas>
+<canvas width="900" height="500" style="margin-left:5%;margin-top:2%;float:left"></canvas>
 <script>
 var canvas = document.querySelector("canvas"),
     context = canvas.getContext("2d"),
@@ -140,14 +141,14 @@ div.selectAll("g")
 			  nodes.forEach(function(d) {
 				context.moveTo(d.x + d.r, d.y);
 				context.arc(d.x, d.y, d.r, 0, tau);
-				context.fillStyle = "#51d6e2";
+				context.fillStyle = "#ffffb3";
 			  context.fill();
 				});
-				/*nodes.forEach(function(d){
+				nodes.forEach(function(d, i){
 				context.font="10px Verdana";
 				context.fillStyle = "#000";
 			    context.fillText(data[i]['Country'],d.x-d.r/2,d.y+d.r/2);
-			  });*/
+			  });
 			  context.strokeStyle = "#333";
 			  context.stroke();
 			   
@@ -181,14 +182,14 @@ div.selectAll("g")
 			  nodes.forEach(function(d) {
 				context.moveTo(d.x + d.r, d.y);
 				context.arc(d.x, d.y, d.r, 0, tau);
-				context.fillStyle = "#51d6e2";
+				context.fillStyle = "#ffffb3";
 				context.fill();
 			  });
-			  /*nodes.forEach(function(d){
+			  nodes.forEach(function(d, i){
 				context.font="10px Verdana";
 				context.fillStyle = "#000";
 			    context.fillText(data[i]['Country'],d.x-d.r/2,d.y+d.r/2);
-			  });*/
+			  });
 			  context.strokeStyle = "#333";
 			  context.stroke(); 		
 			  
@@ -221,14 +222,14 @@ div.selectAll("g")
 			  nodes.forEach(function(d) {
 				context.moveTo(d.x + d.r, d.y);
 				context.arc(d.x, d.y, d.r, 0, tau);
-				context.fillStyle = "#51d6e2";
+				context.fillStyle = "#ffffb3";
 				context.fill();
 			  });
-			  /*nodes.forEach(function(d){
+			  nodes.forEach(function(d, i){
 				context.font="10px Verdana";
 				context.fillStyle = "#000";
 			    context.fillText(data[i]['Country'],d.x-d.r/2,d.y+d.r/2);
-			  });*/
+			  });
 			  context.strokeStyle = "#333";
 			  context.stroke();
 
@@ -242,7 +243,7 @@ div.selectAll("g")
 			  var nodes = d3.range(data.length).map(function(i) {
 			  //console.log(data[i]);  
 			  return {
-				r: data[i]['size'] * 0.75 + 2
+				r: data[i]['size'] * 0.50 + 2
 			  };
 			});
 
@@ -262,30 +263,72 @@ div.selectAll("g")
 			  nodes.forEach(function(d) {
 				context.moveTo(d.x + d.r, d.y);
 				context.arc(d.x, d.y, d.r, 0, tau);
-				context.fillStyle = "#51d6e2";
+				context.fillStyle = "#ffffb3";
 			  context.fill();
 			  });
+			  nodes.forEach(function(d,i){
+				context.font="10px Verdana";
+				context.fillStyle = "#000";
+			    context.fillText(data[i]['Country'],d.x-d.r/2,d.y+d.r/2);
+			});
+			  context.strokeStyle = "#333";
+			  context.stroke();
+
+			  context.restore();
+			}
+			  
+			});
+		}else if(d3.select(this).attr('data-venn-sets')=='0_1_3')
+		{
+			
+			d3.json("food_water_sanit.json", function(data) {
+			  var nodes = d3.range(data.length).map(function(i) {
+			  //console.log(data[i]);  
+			  return {
+				r: data[i]['size'] * 0.45 + 2
+			  };
+			});
+
+			var simulation = d3.forceSimulation(nodes)
+				.velocityDecay(0.5)
+				.force("x", d3.forceX().strength(0.002))
+				.force("y", d3.forceY().strength(0.002))
+				.force("collide", d3.forceCollide().radius(function(d) { return d.r + 0.5; }).iterations(2))
+				.on("tick", ticked);
+
+			function ticked() {
+			  context.clearRect(0, 0, width, height);
+			  context.save();
+			  context.translate(width / 2, height / 2);
+
+			  context.beginPath();
+			  nodes.forEach(function(d) {
+				context.moveTo(d.x + d.r, d.y);
+				context.arc(d.x, d.y, d.r, 0, tau);
+				context.fillStyle = "#ffffb3";
+			  context.fill();
+			  });
+			  nodes.forEach(function(d,i){
+				context.font="10px Verdana";
+				context.fillStyle = "#000";
+			    context.fillText(data[i]['Country'],d.x-d.r/2,d.y+d.r/2);
+			});
 			  
 			  context.strokeStyle = "#333";
 			  context.stroke();
 
 			  context.restore();
 			}
-			
-			/*nodes.forEach(function(d,i){
-				context.font="10px Verdana";
-				context.fillStyle = "#000";
-			    context.fillText(data[i]['Country'],d.x-d.r/2,d.y+d.r/2);
-			});*/
 			  
 			});
-		}else if(d3.select(this).attr('data-venn-sets')=='1_2_3')
+		}
+		else if(d3.select(this).attr('data-venn-sets')=='1_2_3')
 		{
 			d3.json("water_lit_sanit.json", function(data) {
 			  var nodes = d3.range(data.length).map(function(i) {
 			  //console.log(data[i]);
 			  return {
-				r: data[i]['size'] * 0.75 + 2
+				r: data[i]['size'] * 0.45 + 2
 			  };
 			});
 
@@ -305,14 +348,14 @@ div.selectAll("g")
 			  nodes.forEach(function(d) {
 				context.moveTo(d.x + d.r, d.y);
 				context.arc(d.x, d.y, d.r, 0, tau);
-				context.fillStyle = "#51d6e2";
+				context.fillStyle = "#ffffb3";
 			  context.fill();
 			  });
-			  /*nodes.forEach(function(d){
+			  nodes.forEach(function(d,i){
 				context.font="10px Verdana";
 				context.fillStyle = "#000";
 			    context.fillText(data[i]['Country'],d.x-d.r/2,d.y+d.r/2);
-			  });*/
+			  });
 			  context.strokeStyle = "#333";
 			  context.stroke();
 
@@ -326,7 +369,7 @@ div.selectAll("g")
 			  var nodes = d3.range(data.length).map(function(i) {
 			  //console.log(data[i]);
 			  return {
-				r: data[i]['size'] * 0.75 + 2
+				r: data[i]['size'] * 0.45 + 2
 			  };
 			});
 
@@ -346,14 +389,14 @@ div.selectAll("g")
 			  nodes.forEach(function(d) {
 				context.moveTo(d.x + d.r, d.y);
 				context.arc(d.x, d.y, d.r, 0, tau);
-				context.fillStyle = "#51d6e2";
+				context.fillStyle = "#ffffb3";
 			  context.fill();
 			  });
-			  /*nodes.forEach(function(d){
+			  nodes.forEach(function(d,i){
 				context.font="10px Verdana";
 				context.fillStyle = "#000";
 			    context.fillText(data[i]['Country'],d.x-d.r/2,d.y+d.r/2);
-			  });*/
+			  });
 			  
 			  context.strokeStyle = "#333";
 			  context.stroke();
@@ -368,7 +411,7 @@ div.selectAll("g")
 			  var nodes = d3.range(data.length).map(function(i) {
 			  //console.log(data[i]);
 			  return {
-				r: data[i]['size'] * 0.75 + 2
+				r: data[i]['size'] * 0.45 + 2
 			  };
 			});
 
@@ -388,14 +431,14 @@ div.selectAll("g")
 			  nodes.forEach(function(d) {
 				context.moveTo(d.x + d.r, d.y);
 				context.arc(d.x, d.y, d.r, 0, tau);
-				context.fillStyle = "#51d6e2";
+				context.fillStyle = "#ffffb3";
 			  context.fill();
 			  });
-			  /*nodes.forEach(function(d){
+			  nodes.forEach(function(d,i){
 				context.font="10px Verdana";
 				context.fillStyle = "#000";
 			    context.fillText(data[i]['Country'],d.x-d.r/2,d.y+d.r/2);
-			  });*/
+			  });
 			  
 			  context.strokeStyle = "#333";
 			  context.stroke();
@@ -410,7 +453,7 @@ div.selectAll("g")
 			  var nodes = d3.range(data.length).map(function(i) {
 			  //console.log(data[i]);
 			  return {
-				r: data[i]['size'] * 0.75 + 2
+				r: data[i]['size'] * 0.35 + 2
 			  };
 			});
 
@@ -430,14 +473,14 @@ div.selectAll("g")
 			  nodes.forEach(function(d) {
 				context.moveTo(d.x + d.r, d.y);
 				context.arc(d.x, d.y, d.r, 0, tau);
-				context.fillStyle = "#51d6e2";
+				context.fillStyle = "#ffffb3";
 			  context.fill();
 			  });
-			  /*nodes.forEach(function(d){
+			  nodes.forEach(function(d,i){
 				context.font="10px Verdana";
 				context.fillStyle = "#000";
 			    context.fillText(data[i]['Country'],d.x-d.r/2,d.y+d.r/2);
-			  });*/
+			  });
 			  
 			  context.strokeStyle = "#333";
 			  context.stroke();

@@ -353,6 +353,7 @@ d3.json("data/res/countries.topojson",function(error,geodata) {
 				
 				
 				function createMyDonut(country) {
+					document.getElementById('infoDiv').style.display = "block";
                     d3.select("#myPie").remove();
                     d3.selectAll("#tooltipDonut").remove();
 
@@ -438,7 +439,18 @@ d3.json("data/res/countries.topojson",function(error,geodata) {
                         // .style("left", 140 + "px")
                         // .style("top", 900 + "px")
                     });
-
+					
+					pathDonut.on('click',function(d,i){
+						if(i==0)
+                            window.open('https://water.org/donate/','_blank');
+                        if(i==1)
+                            window.open('https://www.totalgiving.co.uk/donate/sanitation-first-limited','_blank');
+                        if(i==2)
+                            window.open('https://donate.unicefusa.org/page/contribute/save-children-from-famine-31975','_blank');
+                        if(i==3)
+                            window.open('https://worldliteracyfoundation.org/donate/','_blank');
+					});
+					
                     pathDonut.on('mouseout', function() {
                         tooltipDonut.style("opacity", 0);
                         d3.select(this).style('opacity',1);
@@ -488,17 +500,17 @@ d3.json("data/res/countries.topojson",function(error,geodata) {
 var radioBtn = svg.append("foreignObject")
 					.attr("width", 250)
 					.attr("height", 150)
-					.attr("x", "85%")
+					.attr("x", "90%")
 					.attr("y", "5%")
 					.append("xhtml:body");
 					
 //radioBtn.append("div").attr("id", "radioBtn_map1")
 	//				.append("input").attr("type", "radio").attr("id", "rBtn11").attr("name", "group2").classed("selected");//.attr("id", "rBtn1").attr("name", "group1").attr("type", "radio").;
 
-radioBtn.html("<div id=\"radioBtn_map\">"+
-        "<input type='radio' id='rBtn1' name='group1' checked>Malnutrition<br>"+
-        "<input type='radio' id='rBtn2' name='group1'>Sanitation<br>"+
-        "<input type='radio' id='rBtn3' name='group1'>Water<br>"+
-		"<input type='radio' id='rBtn4' name='group1'>Literacy"+
+radioBtn.html("<div id=\"radioBtn_map\"><h2>Countries facing:</h2>"+
+        "<label><h3><input type='radio' id='rBtn1' name='group1' value='Malnutrition' checked> Malnutrition</label><br>"+
+        "<label><input type='radio' id='rBtn2' value='Sanitation' name='group1'> Sanitation</label><br>"+
+        "<label><input type='radio' id='rBtn3' value='Water' name='group1'> Water</label><br>"+
+		"<label><input type='radio' id='rBtn4' value='Literacy' name='group1'> Literacy</label></h3>"+
         "</div>");
 
