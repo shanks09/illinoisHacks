@@ -1,4 +1,4 @@
-# Demon Hacks - Social Awareness!
+# Make a Change !
 
 The world as it is right now, faces issues like water deprivation, famine, illiteracy, lack of sanitation, etc. People are deprived of even the basic rights. We wanted to make a system that focuses on the most important issues that the world is facing and we intend to direct donations there.
 
