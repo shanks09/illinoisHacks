@@ -1,0 +1,157 @@
+Country,ISO,Literacy
+Afghanistan,AFG,38.168041
+Albania,ALB,97.553902
+Algeria,DZA,79.608398
+Angola,AGO,71.164162
+Argentina,ARG,98.089973
+Armenia,ARM,99.768417
+Aruba,ABW,97.5242
+Azerbaijan,AZE,99.80526
+Bahrain,BHR,95.717262
+Bangladesh,BGD,61.493832
+Belarus,BLR,99.722038
+Belize,BLZ,82.776817
+Benin,BEN,38.44714
+Bhutan,BTN,63.906818
+Bolivia,BOL,95.141922
+Bosnia and Herzegovina,BIH,98.485764
+Botswana,BWA,88.224411
+Brazil,BRA,92.586807
+Brunei,BRN,96.656532
+Bulgaria,BGR,98.38858
+Burkina Faso,BFA,37.7467
+Burundi,BDI,85.496094
+Cambodia,KHM,78.34594
+Cameroon,CMR,74.98558
+Cape Verde,CPV,88.465424
+Central African Republic,CAF,36.752609
+Chad,TCD,40.018242
+Chile,CHL,96.627548
+China,CHN,96.357452
+Colombia,COL,94.577057
+Comoros,COM,78.13739
+Congo,COG,79.311172
+Costa Rica,CRI,97.647247
+Cote d'Ivoire,CIV,43.26532
+Croatia,HRV,99.272591
+Cuba,CUB,99.710716
+Cyprus,CYP,99.059776
+Democratic Republic of Congo,COD,77.221672
+Dominican Republic,DOM,92.465424
+Ecuador,ECU,94.515472
+Egypt,EGY,75.842621
+El Salvador,SLV,87.648216
+Equatorial Guinea,GNQ,95.195663
+Eritrea,ERI,73.845253
+Estonia,EST,99.823509
+Ethiopia,ETH,49.031521
+Gabon,GAB,83.237877
+Gambia,GMB,55.572762
+Georgia,GEO,99.759621
+Ghana,GHA,76.575897
+Greece,GRC,95.29287
+Guam,GUM,99.78904
+Guatemala,GTM,79.074211
+Guinea,GIN,30.47279
+Guinea-Bissau,GNB,59.77285
+Guyana,GUY,87.535316
+Haiti,HTI,60.68935
+Honduras,HND,88.424583
+Hungary,HUN,99.380882
+India,IND,72.225304
+Indonesia,IDN,95.437683
+Iran,IRN,87.172531
+Iraq,IRQ,79.721764
+Italy,ITA,99.015793
+Jamaica,JAM,88.499901
+Jordan,JOR,98.014351
+Kazakhstan,KAZ,99.787849
+Kenya,KEN,78.023399
+Kuwait,KWT,96.117706
+Kyrgyzstan,KGZ,99.50132
+Laos,LAO,79.867462
+Latvia,LVA,99.892693
+Lebanon,LBN,94.051102
+Lesotho,LSO,79.360931
+Liberia,LBR,47.60014
+Libya,LBY,91.38887
+Lithuania,LTU,99.82328
+Macao,MAC,96.2276
+Macedonia,MKD,97.843758
+Madagascar,MDG,64.656303
+Malawi,MWI,65.963829
+Malaysia,MYS,94.636993
+Maldives,MDV,99.321022
+Mali,MLI,33.068871
+Malta,MLT,94.066612
+Marshall Islands,MHL,98.265083
+Mauritania,MRT,52.123562
+Mauritius,MUS,90.616043
+Mexico,MEX,94.545593
+Moldova,MDA,99.244392
+Mongolia,MNG,98.367638
+Montenegro,MNE,98.719948
+Morocco,MAR,71.710548
+Mozambique,MOZ,58.836552
+Myanmar,MMR,93.09005
+Namibia,NAM,90.820503
+Nepal,NPL,64.663643
+New Caledonia,NCL,96.93782
+Nicaragua,NIC,82.471848
+Niger,NER,19.1026
+Nigeria,NGA,59.568081
+North Korea,PRK,99.999237
+Oman,OMN,93.971649
+Pakistan,PAK,56.440311
+Palau,PLW,99.523972
+Palestine,PSE,96.668037
+Panama,PAN,95.038231
+Papua New Guinea,PNG,63.433491
+Paraguay,PRY,95.53611
+Peru,PER,94.374352
+Philippines,PHL,96.618027
+Poland,POL,99.787422
+Portugal,PRT,95.428108
+Puerto Rico,PRI,93.329422
+Qatar,QAT,97.757088
+Romania,ROU,98.757027
+Russia,RUS,99.719566
+Rwanda,RWA,71.2435
+Samoa,WSM,99.015007
+Sao Tome and Principe,STP,91.747108
+Saudi Arabia,SAU,94.842369
+Senegal,SEN,55.624851
+Serbia,SRB,98.002892
+Seychelles,SYC,95.321083
+Sierra Leone,SLE,48.4319
+Singapore,SGP,96.774628
+Slovenia,SVN,99.71476
+South Africa,ZAF,94.597939
+South Sudan,SSD,31.97625
+Spain,ESP,98.11451
+Sri Lanka,LKA,92.614166
+Sudan,SDN,58.601318
+Suriname,SUR,95.538986
+Swaziland,SWZ,87.470192
+Syria,SYR,86.303932
+Tajikistan,TJK,99.781052
+Tanzania,TZA,80.359497
+Thailand,THA,93.983017
+Timor,TLS,64.066139
+Togo,TGO,66.53759
+Tonga,TON,99.397858
+Trinidad and Tobago,TTO,98.969582
+Tunisia,TUN,81.054192
+Turkey,TUR,95.688103
+Turkmenistan,TKM,99.692932
+Uganda,UGA,73.809837
+Ukraine,UKR,99.764107
+United Arab Emirates,ARE,92.986366
+Uruguay,URY,98.442101
+Uzbekistan,UZB,99.995193
+Vanuatu,VUT,85.058678
+Venezuela,VEN,95.399246
+Vietnam,VNM,94.514267
+Yemen,YEM,69.961952
+Zambia,ZMB,85.117264
+Zimbabwe,ZWE,86.873482

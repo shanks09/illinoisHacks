@@ -1,0 +1,16 @@
+var sets = [
+         {"sets": [0], "label": "Food", "size": 30},
+         {"sets": [1], "label": "Water", "size": 30},
+         {"sets": [2], "label": "Literacy", "size": 30},
+         {"sets": [3], "label": "Sanitation", "size": 30},
+         {"sets": [0, 1], "size": 14},
+         {"sets": [0, 2], "size": 14},
+         {"sets": [0, 3], "size": 15},
+         {"sets": [1, 2], "size": 15},
+         {"sets": [1, 3], "size": 21},
+         {"sets": [2, 3], "size": 18},
+         {"sets": [1, 2, 3], "size": 13},
+         {"sets": [0, 2, 3], "size": 10},
+         {"sets": [0, 1, 3], "size": 11},
+         {"sets": [0, 1, 2], "size": 9},
+         {"sets": [0,1,2,3], "size": 8}];

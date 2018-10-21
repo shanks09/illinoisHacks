@@ -1,0 +1,100 @@
+body {
+    font: 12px sans-serif;
+}
+
+path {
+    stroke-width: 1px;
+    stroke: white;
+    fill: steelblue;
+    cursor: pointer;
+}
+
+path:hover, path.highlighted {
+    fill: tomato;
+}
+
+div.tooltip {
+    position: absolute;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    font-weight: bold;
+    padding: 4px 8px;
+    display: none;
+}
+
+header {
+    background-color: #666;
+    /*padding: 30px;*/
+    text-align: center;
+    font-size: 15px;
+    color: white;
+}
+footer {
+    position:absolute;
+    left:0px;
+    top:1400px;
+    background-color: #777;
+    /*padding: 10px;*/
+    width:100%;
+    text-align: center;
+    color: white;
+
+}
+.legend {
+    position:absolute;
+    left:50px;
+    top:600px;
+}
+.tooltipDonut {
+    box-shadow: 0 0 5px #999999;
+    display: block;
+    opacity: 0;
+    font-size: 12px;
+    left:270px;
+    top:1100px;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+
+    width: 80px;
+    z-index: 10;
+    line-height: 140%; /*Interlineado*/
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 2px;
+}
+.legendDonut {
+    font-size: 13px;
+}
+.secondSVG {
+    font-family: Bookman Old Style;
+    position:absolute;
+    left:100px;
+    top:800px;
+    /*visibility: hidden;*/
+    font-size: 20px;*
+    /*width: 300px;*/
+    /*padding: 0px;*/
+    /*height: 500px;*/
+    /*left:0px;*/
+    /*top:50px;*/
+    /*opacity: 0.4;*/
+    position: absolute;
+    /*background-color: #9ecae1;*/
+    /*font-size: 30px;*/
+}
+
+.pieText {
+    font-family: "Bookman Old Style";
+    font-size: 15px;
+    font-weight: 100;
+    left:140px;
+    top:1270px;
+    width: 300px;
+    height: 50px;
+    padding: 0px;
+    position: absolute;
+}
